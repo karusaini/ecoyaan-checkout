@@ -6,19 +6,19 @@ This project demonstrates Server-Side Rendering (SSR), state management, respons
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 https://ecoyaan-checkout-eta.vercel.app
 
 ---
 
-## 📂 GitHub Repository
+## GitHub Repository
 
 https://github.com/karusaini/ecoyaan-checkout
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Next.js (App Router)**
 - **React**
@@ -32,7 +32,7 @@ https://github.com/karusaini/ecoyaan-checkout
 
 ## Features Implemented
 
-### 🛒 Cart / Order Summary (SSR)
+### Cart / Order Summary (SSR)
 
 - Server-Side Rendering using async Server Components
 - Displays cart items (image, name, price, quantity)
