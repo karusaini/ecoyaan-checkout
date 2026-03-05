@@ -8,13 +8,13 @@ This project demonstrates Server-Side Rendering (SSR), state management, respons
 
 ## 🚀 Live Demo
 
-(Deployed Link Here)
+https://ecoyaan-checkout-eta.vercel.app
 
 ---
 
 ## 📂 GitHub Repository
 
-(Repo Link Here)
+https://github.com/karusaini/ecoyaan-checkout
 
 ---
 
@@ -30,7 +30,7 @@ This project demonstrates Server-Side Rendering (SSR), state management, respons
 
 ---
 
-## ✨ Features Implemented
+## Features Implemented
 
 ### 🛒 Cart / Order Summary (SSR)
 
@@ -39,7 +39,7 @@ This project demonstrates Server-Side Rendering (SSR), state management, respons
 - Calculates subtotal, shipping fee, and total
 - "Proceed to Checkout" navigation
 
-### 📍 Shipping Address
+### Shipping Address
 
 - Form with:
   - Full Name
@@ -56,14 +56,14 @@ This project demonstrates Server-Side Rendering (SSR), state management, respons
 
 - Address persisted using Context API
 
-### 💳 Payment & Confirmation
+### Payment & Confirmation
 
 - Displays order summary (SSR)
 - Displays entered shipping address
 - Simulated "Pay Securely" button
 - Success confirmation screen
 
-### 🎉 Success Page
+### Success Page
 
 - Responsive layout
 - Clean confirmation UI
@@ -71,7 +71,7 @@ This project demonstrates Server-Side Rendering (SSR), state management, respons
 
 ---
 
-## 🧠 Architectural Decisions
+## Architectural Decisions
 
 ### 1. Server-Side Rendering
 
@@ -98,7 +98,7 @@ Reusable components:
 
 ---
 
-## 🏃‍♂️ How to Run Locally
+## How to Run Locally
 
 ```bash
 git clone <repo-url>
@@ -112,7 +112,7 @@ http://localhost:3000
 
 ---
 
-## 📌 Folder Structure
+## Folder Structure
 
 ```
 app/
