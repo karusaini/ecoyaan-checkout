@@ -21,7 +21,6 @@ https://github.com/karusaini/ecoyaan-checkout
 ## Tech Stack
 
 - **Next.js (App Router)**
-- **React**
 - **TypeScript**
 - **Tailwind CSS**
 - **shadcn/ui**
