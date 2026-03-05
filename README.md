@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌿 Ecoyaan Checkout Flow
 
-## Getting Started
+A simplified multi-step Checkout Flow built using **Next.js (App Router)**, **React**, **Tailwind CSS**, and **shadcn/ui**.
 
-First, run the development server:
+This project demonstrates Server-Side Rendering (SSR), state management, responsive UI design, and form validation as part of a frontend engineering assignment.
+
+---
+
+## 🚀 Live Demo
+
+(Deployed Link Here)
+
+---
+
+## 📂 GitHub Repository
+
+(Repo Link Here)
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js (App Router)**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **shadcn/ui**
+- **React Hook Form**
+- **Context API (State Management)**
+
+---
+
+## ✨ Features Implemented
+
+### 🛒 Cart / Order Summary (SSR)
+
+- Server-Side Rendering using async Server Components
+- Displays cart items (image, name, price, quantity)
+- Calculates subtotal, shipping fee, and total
+- "Proceed to Checkout" navigation
+
+### 📍 Shipping Address
+
+- Form with:
+  - Full Name
+  - Email
+  - Phone Number
+  - PIN Code
+  - City
+  - State
+
+- Basic validation:
+  - Valid email format
+  - 10-digit phone number
+  - Required field validation
+
+- Address persisted using Context API
+
+### 💳 Payment & Confirmation
+
+- Displays order summary (SSR)
+- Displays entered shipping address
+- Simulated "Pay Securely" button
+- Success confirmation screen
+
+### 🎉 Success Page
+
+- Responsive layout
+- Clean confirmation UI
+- CTA buttons
+
+---
+
+## 🧠 Architectural Decisions
+
+### 1. Server-Side Rendering
+
+Cart data is fetched inside async Server Components to demonstrate SSR capabilities of Next.js App Router.
+
+### 2. State Management
+
+Context API is used to persist shipping address data across steps.
+
+### 3. Modular Component Structure
+
+Reusable components:
+
+- CartItem
+- OrderSummary
+- AddressForm
+- PaymentClient
+
+### 4. Responsive UI
+
+- Tailwind CSS for layout
+- Mobile-first responsive design
+- Clean container-based structure
+
+---
+
+## 🏃‍♂️ How to Run Locally
 
 ```bash
+git clone <repo-url>
+cd ecoyaan-checkout
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit:
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📌 Folder Structure
 
-## Learn More
+```
+app/
+  page.tsx (Cart - SSR)
+  checkout/
+  payment/
+  success/
 
-To learn more about Next.js, take a look at the following resources:
+components/
+context/
+lib/
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍💻 Author
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built as part of a Frontend Engineering assignment.
