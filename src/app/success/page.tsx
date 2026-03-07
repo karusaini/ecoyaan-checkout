@@ -1,10 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import CheckoutSteps from "@/components/CheckoutSteps";
 
 export default function SuccessPage() {
   return (
-    <div className="flex items-center justify-center min-h-[70vh] px-4">
+    <div className="flex flex-col items-center justify-center min-h-[70vh] px-4 space-y-8">
+      {/* Step Indicator */}
+      <CheckoutSteps step={3} />
+
       <Card className="w-full max-w-lg rounded-2xl shadow-lg">
         <CardContent className="p-8 text-center space-y-5">
           <div className="flex justify-center">

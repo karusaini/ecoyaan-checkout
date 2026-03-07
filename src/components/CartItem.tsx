@@ -12,28 +12,38 @@ interface CartItemProps {
 }
 
 export default function CartItem({ product }: CartItemProps) {
+  const total = product.product_price * product.quantity;
+
   return (
-    <Card className="rounded-2xl shadow-sm">
-      <CardContent className="flex flex-col md:flex-row gap-6 p-6">
-        <div className="relative w-32 h-32">
+    <Card className="rounded-2xl border shadow-sm hover:shadow-md transition">
+      <CardContent className="flex flex-col sm:flex-row items-center sm:items-start gap-5 p-5">
+        {/* Product Image */}
+        <div className="relative w-28 h-28 shrink-0 overflow-hidden rounded-xl border bg-gray-50">
           <Image
             src={product.image}
             alt={product.product_name}
             fill
-            className="object-cover rounded-xl"
+            className="object-cover"
           />
         </div>
 
-        <div className="flex-1 space-y-2">
-          <h2 className="text-lg font-semibold">{product.product_name}</h2>
+        {/* Product Details */}
+        <div className="flex-1 text-center sm:text-left space-y-2">
+          <h2 className="text-lg font-semibold leading-tight">
+            {product.product_name}
+          </h2>
 
-          <p className="text-muted-foreground">
-            ₹{product.product_price} × {product.quantity}
+          <p className="text-sm text-muted-foreground">
+            ₹{product.product_price} each
           </p>
 
-          <p className="font-medium">
-            ₹{product.product_price * product.quantity}
-          </p>
+          <div className="flex items-center justify-center sm:justify-start gap-3">
+            <span className="text-sm px-3 py-1 rounded-full bg-gray-100">
+              Qty: {product.quantity}
+            </span>
+
+            <span className="text-lg font-semibold">₹{total}</span>
+          </div>
         </div>
       </CardContent>
     </Card>

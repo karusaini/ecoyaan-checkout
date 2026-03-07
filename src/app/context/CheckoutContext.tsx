@@ -1,19 +1,50 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
-const CheckoutContext = createContext<any>(null);
+interface Address {
+  fullName: string;
+  email: string;
+  phone: string;
+  pinCode: string;
+  city: string;
+  state: string;
+}
+
+interface CheckoutContextType {
+  addresses: Address[];
+  addAddress: (address: Address) => void;
+}
+
+const CheckoutContext = createContext<CheckoutContextType | null>(null);
 
 export function CheckoutProvider({ children }: { children: React.ReactNode }) {
-  const [address, setAddress] = useState(null);
+  const [addresses, setAddresses] = useState<Address[]>([]);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("addresses");
+    if (stored) {
+      setAddresses(JSON.parse(stored));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("addresses", JSON.stringify(addresses));
+  }, [addresses]);
+
+  const addAddress = (address: Address) => {
+    setAddresses((prev) => [...prev, address]);
+  };
 
   return (
-    <CheckoutContext.Provider value={{ address, setAddress }}>
+    <CheckoutContext.Provider value={{ addresses, addAddress }}>
       {children}
     </CheckoutContext.Provider>
   );
 }
 
-export function useCheckout() {
-  return useContext(CheckoutContext);
-}
+export const useCheckout = () => {
+  const context = useContext(CheckoutContext);
+  if (!context) throw new Error("useCheckout must be used inside provider");
+  return context;
+};
